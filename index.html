@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MultiEmulator</title>
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<script defer src="./pwa.js"></script>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#000;color:#fff;font:14px system-ui,sans-serif;overflow:hidden}
+#unity-canvas{display:block;width:100%;height:100%;background:#000;outline:none;touch-action:none}
+#status{position:fixed;top:12px;left:12px;max-width:calc(100% - 24px);background:#161a20;padding:10px;border-radius:4px}
+</style>
+</head>
+<body>
+<div id="status">Loading…</div>
+<canvas id="unity-canvas" tabindex="0"></canvas>
+<script>
+const canvas=document.getElementById('unity-canvas'),status=document.getElementById('status');
+const config={
+ dataUrl:'Build/WebBuild.data',frameworkUrl:'Build/WebBuild.framework.js',codeUrl:'Build/WebBuild.wasm',
+ streamingAssetsUrl:'StreamingAssets',companyName:'koitan',productName:'MultiEmulator',productVersion:'1.0',
+ autoSyncPersistentDataPath:true,matchWebGLToCanvasSize:true,
+ showBanner:(message,type)=>{if(type==='error'){status.hidden=false;status.textContent=message;console.error(message);}}
+};
+const script=document.createElement('script');script.src='Build/WebBuild.loader.js';
+script.onload=()=>createUnityInstance(canvas,config,progress=>status.textContent='Loading '+Math.round(progress*100)+'%').then(instance=>{
+ window.multiEmulator=instance;status.hidden=true;
+ canvas.focus();
+}).catch(error=>{status.hidden=false;status.textContent=String(error);console.error(error);});
+if(!navigator.gpu){status.textContent='WebGPU対応ブラウザで開いてください（HTTPS / localhostが必要です）';}
+else document.body.appendChild(script);
+</script>
+</body>
+</html>
