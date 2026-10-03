@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '596c267f3ab3aa02d634';
+const VERSION = 'ae42bff47535e6942ad5';
 const PREFIX = 'multiemulator-pwa:' + self.registration.scope + ':';
 const CACHE = PREFIX + VERSION;
 const FILES = ["index.html", "manifest.webmanifest", "pwa.js", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png", "Build/WebBuild.data", "Build/WebBuild.framework.js", "Build/WebBuild.loader.js", "Build/WebBuild.wasm"];
