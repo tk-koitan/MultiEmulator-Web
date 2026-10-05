@@ -6,7 +6,7 @@ koitanのGame Boy / Game Boy Color / Game Boy AdvanceエミュレータのWeb/PW
 
 https://tk-koitan.github.io/MultiEmulator-Web/
 
-WebGPU対応のブラウザで開いてください。R3 / Esc（タッチ操作ではメニュー）から「ROMを開く」を選び、手元の `.gb` / `.gbc` / `.gba` を読み込みます。GBAのローカル通信は設定で2〜4台を選べます。
+WebGPU対応のブラウザで開いてください。R3 / Esc（タッチ操作ではメニュー）から「ROMを開く」を選び、手元の `.gb` / `.gbc` / `.gba` を読み込みます。GBAのローカル通信は設定で2〜4台、オンライン通信はルーム作成時に2〜4人を選べます。オンラインでは全員が全参加者のROMを手元のライブラリに登録し、準備完了を押してください。
 
 ## インストール
 
