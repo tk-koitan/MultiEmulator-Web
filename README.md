@@ -1,12 +1,12 @@
 # MultiEmulator Web
 
-koitanのGame Boy / Game Boy Color / Game Boy AdvanceエミュレータのWeb/PWA配布ファイルです。
+koitanのGame Boy / Game Boy Color / Game Boy Advance / ファミコンエミュレータのWeb/PWA配布ファイルです。
 
 ## 起動
 
 https://tk-koitan.github.io/MultiEmulator-Web/
 
-WebGPU対応のブラウザで開いてください。R3 / Esc（タッチ操作ではメニュー）から「ROMを開く」を選び、手元の `.gb` / `.gbc` / `.gba` を読み込みます。GBAのローカル通信は設定で2〜4台、オンライン通信はルーム作成時に2〜4人を選べます。オンラインでは全員が全参加者のROMを手元のライブラリに登録し、準備完了を押してください。
+WebGPU対応のブラウザで開いてください。R3 / Esc（タッチ操作ではメニュー）から「ROMを開く」を選び、手元の `.gb` / `.gbc` / `.gba` / `.nes` を読み込みます。ファミコンはNTSCのNROM（マッパー0）に試験対応しています。GBAのローカル通信は設定で2〜4台、オンライン通信はルーム作成時に2〜4人を選べます。オンラインでは全員が全参加者のROMを手元のライブラリに登録し、準備完了を押してください。
 
 ## インストール
 
