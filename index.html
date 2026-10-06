@@ -23,7 +23,7 @@ html,body{margin:0;width:100%;height:100%;background:#000;color:#fff;font:14px s
 const canvas=document.getElementById('unity-canvas'),status=document.getElementById('status');
 const config={
  dataUrl:'Build/WebBuild.data',frameworkUrl:'Build/WebBuild.framework.js',codeUrl:'Build/WebBuild.wasm',
- streamingAssetsUrl:'StreamingAssets',companyName:'koitan',productName:'MultiEmulator',productVersion:'1.0.75',
+ streamingAssetsUrl:'StreamingAssets',companyName:'koitan',productName:'MultiEmulator',productVersion:'1.0.76',
  autoSyncPersistentDataPath:true,matchWebGLToCanvasSize:true,
  showBanner:(message,type)=>{if(type==='error'){status.hidden=false;status.textContent=message;console.error(message);}}
 };
